@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Integrales" />
+        <meta name="keywords" content="Integrales, Cálculo" />
+        <meta name="author" content="c0d3hdz" />
+        <meta name="robots" content="index, follow" />
+        <meta name="revision" content="1" />
+        <meta name="date" content="2025-03-23" />
+        <meta name="distribution" content="global" />
+        <meta name="language" content="es-MX" />
+        <meta name="generator" content="Visual Studio Code" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Integrales</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Integrales</h1>
+            <p>Damian Marquez Hernandez <mark>G2 - Ingenieria en sistemas computacionales </mark></p>
+        </header>
+        <section class="controls">
+            <article>
+                <h2>Ejemplos de entrada.</h2>
+                <ul>
+                    <li>Math.sin(x) de 0 a Math.PI</li>
+                    <li>x*x de 0 a 1</li>
+                    <li>Math.exp(x) de 0 a 2</li>
+                    <li>1/x de 1 a 2</li>
+                </ul>
+            </article>
+            <div>
+                <input type="number" id="a" value="0" placeholder="Límite a" />
+                <input type="number" id="b" value="2" placeholder="Límite b" />
+                <input type="number" id="n" value="10" placeholder="Particiones" />
+                <input type="text" id="funcion" value="Math.sin(x)" placeholder="Función" />
+                <button onclick="calcularIntegral()">Calcular</button>
+            </div>
+        </section>
+        <section><mark id="resultado"></mark></section>
+        <section>
+            <canvas id="grafico" width="760" height="400"></canvas>
+        </section>
+        <section>
+            <h3>Metodo del trapecio</h3>
+            <article>
+                <p>
+                    El método del trapecio es un método de integración numérica que se basa en aproximar el valor de la
+                    integral de una función mediante la suma de áreas de trapecios.
+                </p>
+                <p>
+                    <img
+                        src="integral.png"
+                        alt="imagen de la formula de metodo de trapecio para resolver integrales."
+                    />
+                </p>
+            </article>
+            <h4>Ejemplo</h4>
+            <article>
+                <p>Calcular la integral de la función f(x) = x^2 en el intervalo [0, 1] con 4 particiones.</p>
+                <p>n = <strong>4</strong></p>
+                <p>a = <strong>0</strong></p>
+                <p>b = <strong>1</strong></p>
+                <p>Δx = <strong>b-a/n</strong> = <strong>1-0/4 = 0.25</strong></p>
+                <p>Xi = <strong>f(x<b>i</b>) = x<b>i</b>^2 </strong></p>
+                <p>
+                    Area del subintervalo = <strong>Δx/2 [f(x <b>i</b>)+f(x <b>i+1 </b>)</strong>
+                </p>
+            </article>
+        </section>
+        <footer>
+            <p>Integrales</p>
+            <p>@c0d3hdz</p>
+            <span>
+                <a href="https://github.com/c0d3hdz" alt="GitHub">
+                    <img
+                        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                        alt="GitHub Icon"
+                        width="24"
+                        height="24"
+                    />
+                </a>
+            </span>
+        </footer>
+    </body>
+    <script src="scrip.js"></script>
+</html>

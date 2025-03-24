@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f8f9fa;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+    background-color: #ffffff;
+    background-image: radial-gradient(at 47% 33%, hsl(196.19, 45%, 72%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(199.74, 96%, 84%) 0, transparent 55%);
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+body {
+    backdrop-filter: blur(5px);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    justify-content: justify;
+    width: 800px;
+    margin: auto;
+}
+header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 5px #6082bd;
+    color: #212121c4;
+}
+h2 {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #007bff;
+    text-shadow: 1px 1px 5px #6082bd;
+}
+h3 {
+    margin: 20px 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: #007bff;
+    text-shadow: 1px 1px 5px #6082bd;
+}
+p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+h4 {
+    margin: 20px 0;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #007bff;
+    text-shadow: 1px 1px 5px #6082bd;
+}
+canvas {
+    border: 1px solid #000;
+    margin: auto;
+    box-shadow: 1px 1px 15px #6082bd;
+}
+canvas:hover {
+    box-shadow: 1px 1px 15px #007bff, inset 1px 1px 15px #4c4c4c43;
+}
+.controls {
+    margin: 20px 0;
+}
+input {
+    width: 200px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    padding: 5px;
+    font-size: smaller;
+}
+li {
+    text-decoration: underline;
+}
+button:hover {
+    background-color: #0056b3;
+}
+section {
+    margin: 20px 0;
+}
+article {
+    margin: 20px 0;
+}
+b {
+    font-size: x-small;
+}
+footer {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    text-align: center;
+}
+img {
+    display: block;
+    margin: 20px auto;
+    mask-image: linear-gradient(black 90%, transparent 100%);
+}
+mark {
+    background-image: linear-gradient(90deg, #007bff, #0056b3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 5px #6082bd;
+}
+div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+@media screen and (max-width: 800px) {
+    body {
+        width: 100%;
+        padding: 15px;
+    }
+    canvas {
+        width: 100%;
+    }
+}
