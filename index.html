@@ -11,67 +11,79 @@
         <meta name="distribution" content="global" />
         <meta name="language" content="es-MX" />
         <meta name="generator" content="Visual Studio Code" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Integrales</title>
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
-            <h1>Integrales</h1>
-            <p>Damian Marquez Hernandez <mark>G2 - Ingenieria en sistemas computacionales </mark></p>
+            <h1>Calculo Integral</h1>
+            <h2>Area bajo la curva</h2>
+            <span><mark>Damian Marquez y Karen Vargas</mark></span>
         </header>
+        <section class="Info">
+            <h3>¿Qué es una integral?</h3>
+            <p>
+                La integral es una operación matemática que permite calcular el área bajo una curva en un intervalo
+                determinado. Se utiliza en diversas áreas de la ciencia y la ingeniería para resolver problemas
+                relacionados con el cálculo de áreas, volúmenes y otras magnitudes.
+            </p>
+            <p>
+                En términos simples, la integral de una función f(x) en el intervalo [a, b] se representa como ∫[a,b]
+                f(x) dx y se interpreta como el área bajo la curva de f(x) entre los límites a y b.
+            </p>
+        </section>
         <section class="controls">
-            <article>
-                <h2>Ejemplos de entrada.</h2>
-                <ul>
-                    <li>Math.sin(x) de 0 a Math.PI</li>
-                    <li>x*x de 0 a 1</li>
-                    <li>Math.exp(x) de 0 a 2</li>
-                    <li>1/x de 1 a 2</li>
-                </ul>
-            </article>
-            <div>
-                <input type="number" id="a" value="0" placeholder="Límite a" />
-                <input type="number" id="b" value="2" placeholder="Límite b" />
-                <input type="number" id="n" value="10" placeholder="Particiones" />
-                <input type="text" id="funcion" value="Math.sin(x)" placeholder="Función" />
-                <button onclick="calcularIntegral()">Calcular</button>
+            <div class="form">
+                <input type="number" id="a"  placeholder="Límite a" />
+                <input type="number" id="b"  placeholder="Límite b" />
+                <input type="text" id="funcion" placeholder="Función (x**2 + 2*x)" />
             </div>
+            <button onclick="calcularIntegral()">Calcular</button>
         </section>
-        <section><mark id="resultado"></mark></section>
-        <section>
-            <canvas id="grafico" width="760" height="400"></canvas>
+        <section class="resultado"><mark id="resultado">Resultado aproximado:</mark></section>
+        <section class="Info">
+            <h3>¿Cómo funciona?</h3>
+            <p>
+                Para calcular el área bajo la curva, se aplica el Teorema Fundamental del Cálculo en combinación con la
+                suma de Riemann. Este enfoque permite obtener un resultado aproximado con un manejo preciso de los
+                decimales, asegurando una mayor exactitud en los cálculos.
+            </p>
         </section>
         <section>
-            <h3>Metodo del trapecio</h3>
-            <article>
+            <h3>Entradas aceptadas</h3>
+            <p>
+                La función debe ser una expresión matemática válida en JavaScript. Puedes usar operadores matemáticos
+                como +, -, *, / y ** (para exponentes). Por ejemplo, puedes ingresar funciones como:
+            </p>
+            <article class="Lista">
+                <ul>
+                    <li><code>x**2</code> (Polinomio cuadrático)</li>
+                    <li><code>x**3 + 2*x**2 - x + 5</code> (Polinomio cúbico)</li>
+                    <li><code>Math.sin(x)</code> (Seno)</li>
+                    <li><code>Math.cos(x)</code> (Coseno)</li>
+                    <li><code>Math.tan(x)</code> (Tangente)</li>
+                    <li><code>Math.exp(x)</code> (Exponencial \(e^x\))</li>
+                    <li><code>Math.log(x)</code> (Logaritmo natural, solo para \(x > 0\))</li>
+                    <li><code>Math.sqrt(x)</code> (Raíz cuadrada, solo para \(x \geq 0\))</li>
+                    <li><code>x**(1/3)</code> (Raíz cúbica)</li>
+                    <li><code>Math.PI</code> (Constante \(\pi\))</li>
+                    <li><code>Math.E</code> (Constante \(e\))</li>
+                </ul>
                 <p>
-                    El método del trapecio es un método de integración numérica que se basa en aproximar el valor de la
-                    integral de una función mediante la suma de áreas de trapecios.
-                </p>
-                <p>
-                    <img
-                        src="integral.png"
-                        alt="imagen de la formula de metodo de trapecio para resolver integrales."
-                    />
-                </p>
-            </article>
-            <h4>Ejemplo</h4>
-            <article>
-                <p>Calcular la integral de la función f(x) = x^2 en el intervalo [0, 1] con 4 particiones.</p>
-                <p>n = <strong>4</strong></p>
-                <p>a = <strong>0</strong></p>
-                <p>b = <strong>1</strong></p>
-                <p>Δx = <strong>b-a/n</strong> = <strong>1-0/4 = 0.25</strong></p>
-                <p>Xi = <strong>f(x<b>i</b>) = x<b>i</b>^2 </strong></p>
-                <p>
-                    Area del subintervalo = <strong>Δx/2 [f(x <b>i</b>)+f(x <b>i+1 </b>)</strong>
+                    Nota: Asegúrate de que los límites de integración sean válidos para la función ingresada. Por ejemplo:
+                    <ul>
+                        <li>Para <code>Math.log(x)</code>, los límites deben ser mayores que 0.</li>
+                        <li>Para <code>Math.sqrt(x)</code>, los límites deben ser mayores o iguales a 0.</li>
+                    </ul>
                 </p>
             </article>
         </section>
         <footer>
+        <div>
             <p>Integrales</p>
             <p>@c0d3hdz</p>
+        </div>
+        <div class="social">
             <span>
                 <a href="https://github.com/c0d3hdz" alt="GitHub">
                     <img
@@ -82,6 +94,7 @@
                     />
                 </a>
             </span>
+        </div>
         </footer>
     </body>
     <script src="scrip.js"></script>
